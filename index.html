@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Imagem de fundo 001</title>
+    <script>
+        function exibirIframe(nome)
+            {
+             document.getElementById(nome).style.display = "block";
+            }
+        function esconderIframe(nome)
+        {
+            document.getElementById(nome).style.display = "none"
+        }
+    </script>
+</head>
+<body>
+   <div>
+       <Header id="cabeçalho">
+         <hgroup>
+            <h1 id="tprincipal">Sanja Music</h1>
+            <h2 id="tsecundario">Só música de qualidade!</h2>
+         </hgroup>
+         <nav id="Menu">
+            <h1 id="titulomenu">Menu principal</h1>
+            <ul>
+                <li> <a href="index.html" target="_self">Principal</a> </li>
+                <li><a href="sobrenos.html" target="_self"> Sobre Nós</a> </li>
+                <li><a href="faleconosco.html"  target="_self">Fale Conosco</a></li>
+            </ul>
+         </nav>
+       </Header>
+   </div>
+   <div>
+       <header>
+           <h1>Lista de Músicas</h1>
+       </header>
+       <p onclick="exibirIframe('iframe1')">Atrasando esse lean</p>
+       <iframe id="iframe1" width="560" height="315" src="https://www.youtube.com/embed/nRjTcd34i-w?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <input type="button" value="minimizar" onclick="esconderIframe('iframe1')">
+   </div>
+    
+</body>
+</html>
