@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <title>Imagem de fundo 001</title>
     <script>
-        function exibirIframe(nome)
+        function exibirIframe(nome,nbutton)
             {
              document.getElementById(nome).style.display = "block";
+             document.getElementById(nbutton).style.display = "inline-block"
             }
-        function esconderIframe(nome)
+        function esconderIframe(nome,nbutton)
         {
             document.getElementById(nome).style.display = "none"
+            document.getElementById(nbutton).style.display = "none";
         }
+        
     </script>
 </head>
 <body>
@@ -39,9 +42,9 @@
        <header>
            <h1>Lista de Músicas</h1>
        </header>
-       <p onclick="exibirIframe('iframe1')">Atrasando esse lean</p>
+       <p onclick="exibirIframe('iframe1','button1')" id="musica1">Atrasando esse lean</p>
        <iframe id="iframe1" width="560" height="315" src="https://www.youtube.com/embed/nRjTcd34i-w?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       <input type="button" value="minimizar" onclick="esconderIframe('iframe1')">
+       <input id="button1" type="button" value="minimizar" onclick="esconderIframe('iframe1','button1')">
    </div>
     
 </body>
